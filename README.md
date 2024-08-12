@@ -1,2 +1,2 @@
 # brunaalicebe.github.io
-Curriculo - Jornada Dev
+Jornada Dev
