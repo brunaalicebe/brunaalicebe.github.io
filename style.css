@@ -252,13 +252,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4eae8', end
 
 @media (max-width: 768px) {
   .resume-contents {
-    flex-direction: column;
+    display: block;
+    width: 100%;
     padding: 20px;
   }
 
   .left-section,
   .right-section {
     width: 100%;
+    grid-column: span 1 !important;
+    border-radius: 0 !important;
   }
 
   .left-section {
@@ -281,20 +284,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4eae8', end
   }
 
   .experience-contents,
-  .education-contents {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .exp-left,
-  .exp-right,
-  .education-left,
-  .education-right {
-    width: 100%;
+  .education-contents,
+  .awards-contents {
+    display: block;
   }
 
   .about-me-contents {
     font-size: 14px;
     line-height: 1.6;
   }
+
+  .top {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .top div {
+    width: auto;
+  }
+}
+
 }
