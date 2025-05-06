@@ -251,28 +251,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4eae8', end
 }
 
 @media (max-width: 768px) {
+  /* Ajusta a largura da área de conteúdo para garantir que ela ocupe bem a tela no mobile */
   .resume-contents {
     display: block;
-    width: 100%;
-    padding: 20px;
+    width: 90%; /* Menos margem, se necessário */
+    padding: 10px;
+    margin: 0 auto; /* Centraliza */
   }
 
+  /* Ajusta o layout das seções para que fiquem empilhadas no mobile */
   .left-section,
   .right-section {
-    width: 100%;
-    grid-column: span 1 !important;
-    border-radius: 0 !important;
+    width: 100%; /* Faz com que as seções ocupem toda a largura */
+    margin-bottom: 20px; /* Espaço entre as seções */
+    border-radius: 0; /* Retira arredondamento em telas menores */
   }
 
-  .left-section {
-    margin-bottom: 20px;
-  }
-
+  /* Ajuste na imagem do perfil */
   .profile-image {
     width: 120px;
     height: 120px;
   }
 
+  /* Ícones - ajustar para centralizar e diminuir o espaço entre eles */
   .icons {
     display: flex;
     justify-content: center;
@@ -283,10 +284,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4eae8', end
     font-size: 24px;
   }
 
+  /* Adapta os conteúdos das experiências e outras seções */
   .experience-contents,
   .education-contents,
   .awards-contents {
-    display: block;
+    display: block; /* Mudando o grid para uma coluna */
+    padding-bottom: 2rem;
   }
 
   .about-me-contents {
@@ -304,6 +307,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4eae8', end
   .top div {
     width: auto;
   }
+
+  /* Ajustes para fontes menores para o mobile */
+  .name {
+    font-size: 18px;
+  }
+
+  .profession {
+    font-size: 12px;
+  }
+
+  .exp-company-name,
+  .education-school-name,
+  .awards-company-name {
+    font-size: 16px;
+  }
+
+  .exp-position,
+  .education-subject,
+  .awards-name {
+    font-size: 16px;
+  }
+
+  .exp-desc,
+  .education-desc,
+  .awards-desc {
+    font-size: 14px;
+    padding-left: 5px;
+    border-left: solid #c4a7f2;
+  }
 }
 
-}
