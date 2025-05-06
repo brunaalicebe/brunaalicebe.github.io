@@ -262,10 +262,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4eae8', end
 
   .left-section,
   .right-section {
-    grid-column: auto;
-    width: 100%;
-    border-radius: 0;
     height: auto;
+    border-radius: 0;
+    width: 100%;
   }
 
   .left-section-contents,
@@ -274,8 +273,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4eae8', end
   }
 
   .profile-image {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 
   .experience-contents,
@@ -287,6 +286,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4eae8', end
   .top {
     justify-content: center;
     padding-left: 0;
+  }
+
+  .icons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .icons-item i {
+    font-size: 20px;
   }
 }
 
