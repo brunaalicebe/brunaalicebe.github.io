@@ -251,90 +251,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4eae8', end
 }
 
 @media (max-width: 768px) {
-  /* Ajusta a largura da área de conteúdo para garantir que ela ocupe bem a tela no mobile */
   .resume-contents {
-    display: block;
-    width: 90%; /* Menos margem, se necessário */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+    margin: 0;
     padding: 10px;
-    margin: 0 auto; /* Centraliza */
-  }
-
-  /* Ajusta o layout das seções para que fiquem empilhadas no mobile */
-  .left-section,
-  .right-section {
-    width: 100%; /* Faz com que as seções ocupem toda a largura */
-    margin-bottom: 20px; /* Espaço entre as seções */
-    border-radius: 0; /* Retira arredondamento em telas menores */
-  }
-
-  /* Ajuste na imagem do perfil */
-  .profile-image {
-    width: 120px;
-    height: 120px;
-  }
-
-  /* Ícones - ajustar para centralizar e diminuir o espaço entre eles */
-  .icons {
-    display: flex;
-    justify-content: center;
     gap: 10px;
   }
 
-  .icons-item i {
-    font-size: 24px;
+  .left-section,
+  .right-section {
+    grid-column: auto;
+    width: 100%;
+    border-radius: 0;
+    height: auto;
   }
 
-  /* Adapta os conteúdos das experiências e outras seções */
+  .left-section-contents,
+  .right-section-contents {
+    padding: 1rem;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
   .experience-contents,
   .education-contents,
   .awards-contents {
-    display: block; /* Mudando o grid para uma coluna */
-    padding-bottom: 2rem;
-  }
-
-  .about-me-contents {
-    font-size: 14px;
-    line-height: 1.6;
+    grid-template-columns: 1fr;
   }
 
   .top {
-    padding-left: 0;
-    display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  .top div {
-    width: auto;
-  }
-
-  /* Ajustes para fontes menores para o mobile */
-  .name {
-    font-size: 18px;
-  }
-
-  .profession {
-    font-size: 12px;
-  }
-
-  .exp-company-name,
-  .education-school-name,
-  .awards-company-name {
-    font-size: 16px;
-  }
-
-  .exp-position,
-  .education-subject,
-  .awards-name {
-    font-size: 16px;
-  }
-
-  .exp-desc,
-  .education-desc,
-  .awards-desc {
-    font-size: 14px;
-    padding-left: 5px;
-    border-left: solid #c4a7f2;
+    padding-left: 0;
   }
 }
 
